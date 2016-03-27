@@ -3,6 +3,8 @@
 // Declare app level module which depends on views, and components
 angular.module('myApp', [
     'ui.router',
+    'ngMaterial',
+    'ngMessages',
     'myApp.version'
   ])
   .config(function ($stateProvider, $urlRouterProvider) {
@@ -18,5 +20,9 @@ angular.module('myApp', [
         url: '/view2',
         templateUrl: 'view2/view2.html',
         controller: 'View2Ctrl'
+      })
+      .state('signin', {
+        url: '/signin',
+        templateUrl: 'public/auth/sign-in.html'
       });
   });

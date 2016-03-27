@@ -7,7 +7,7 @@ angular.module('myApp', [
   ])
   .config(function ($stateProvider, $urlRouterProvider) {
     $urlRouterProvider.otherwise('/view1');
-    alert('fack');
+
     $stateProvider
       .state('view1', {
         url: '/view1',

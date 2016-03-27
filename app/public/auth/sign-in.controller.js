@@ -1,16 +1,24 @@
 (function (ng) {
   'use strict';
 
-  var inject = [];
+  var inject = ['User'];
 
-  var signinController = function () {
+  var signinController = function (User) {
     var vm = this;
     vm.username = '';
     vm.password = '';
+    vm.signedIn = false;
+
+    vm.signIn = signIn;
+
+    function signIn(){
+      var result = User.signin(vm.username, vm.password);
+      vm.signedIn = result;
+    }
   };
 
   signinController.$inject = inject;
 
   ng.module('dlx.goozele')
-    .controller('SignIn', signinController)
+    .controller('SignIn', signinController);
 })(window.angular);

@@ -2,7 +2,7 @@
   <form name="signin" layout="row" layout-align="start center">
     <md-input-container class="md-block">
       <label>Username</label>
-      <input type="text" name="un" required/>
+      <input type="text" name="un" required ng-model="vm.username" />
       <div ng-messages="signin.un.$error">
         <div ng-message="required">Required</div>
       </div>
@@ -10,7 +10,7 @@
 
     <md-input-container class="md-block">
       <label>Password</label>
-      <input type="password" name="pw" required/>
+      <input type="password" name="pw" required ng-model="vm.password" />
       <div ng-messages="signin.pw.$error">
         <div ng-message="required">Required</div>
       </div>

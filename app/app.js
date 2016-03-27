@@ -1,7 +1,7 @@
 'use strict';
 
 // Declare app level module which depends on views, and components
-angular.module('myApp', [
+angular.module('dlx.goozele', [
     'ui.router',
     'ngMaterial',
     'ngMessages',
@@ -23,6 +23,8 @@ angular.module('myApp', [
       })
       .state('signin', {
         url: '/signin',
-        templateUrl: 'public/auth/sign-in.html'
+        templateUrl: 'public/auth/sign-in.html',
+        controller: 'SignIn',
+        controllerAs: 'vm'
       });
   });
